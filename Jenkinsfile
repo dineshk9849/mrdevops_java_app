@@ -13,15 +13,14 @@ pipeline{
     }
 
     stages{
-         
-        stage('Git Checkout'){
-                    when { expression {  params.action == 'create' } }
+        stage('Git checkout'){
             steps{
-            gitCheckout(
-                branch: "main",
-                url: "https://github.com/dineshk9849/mrdevops_java_app.git"
-            )
+                gitCheckout(
+                     git branch: 'main',
+        url: 'https://github.com/dineshk9849/mrdevops_java_app.git'
+                )
             }
+       
         }
          stage('Unit Test maven'){
          
