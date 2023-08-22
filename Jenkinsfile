@@ -16,7 +16,7 @@ pipeline{
         stage('Git checkout'){
             steps{
                 gitCheckout(
-                     git branch: 'main',
+                     branch: 'main',
         url: 'https://github.com/dineshk9849/mrdevops_java_app.git'
                 )
             }
